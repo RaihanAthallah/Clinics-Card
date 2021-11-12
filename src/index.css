@@ -1,13 +1,53 @@
-body {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background: #afb6bb;
+  color: #222;
+}
+
+.cliniclist {
+  width: 90vw;
+  max-width: 1170px;
+  margin: 5rem auto;
+  display: grid;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .cliniclist {
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: start; */
+  }
+}
+
+.clinic {
+  background: #fff;
+  border-radius: 14px;
+}
+.clinic img {
+  border-radius: 14px 14px 0 0;
+  max-height: 200px;
+  width: 100%;
+}
+.clinic h1 {
+  margin-top: 0.5rem;
+}
+.clinic h4 {
+  color: #617d98;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+.clinic p {
+  margin-top: 0.5rem;
+}
+.addition {
+  padding: 1rem 2rem;
 }
